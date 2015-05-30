@@ -2,7 +2,7 @@
   "name": "ImageServer8",
   "description": "Servidor de Imagens",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "dependencies": {
 	"http": "*"
   },
