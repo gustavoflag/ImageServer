@@ -6,7 +6,7 @@ http.ServerResponse.prototype.writeText = function(text){
 }
 
 http.ServerResponse.prototype.writeImage = function(buffer){
-  this.writeHead(200, { 'content-type': 'image/jpeg' });
+  this.writeHead(200, { 'content-type': 'image/png' });
   this.end(buffer);
 }
 

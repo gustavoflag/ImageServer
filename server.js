@@ -1,12 +1,13 @@
 require('./extends');
 var http = require('http');
 var url = require('url');
-var fileFinder = require('./routes/fileFinder')
+var fileFinder = require('./routes/fileFinder');
+var port = process.env.PORT || 7000;
+
 
 var config = {
   imagePath: process.argv[2],
-  cssPath: process.argv[3],
-  port: process.argv[4]
+  cssPath: process.argv[3]
 }
 
 log = function(data){
@@ -64,6 +65,6 @@ var server = http.createServer(function (req, res) {
   }
 });
 
-server.listen(Number(config.port), function(){
-  log('Servidor no ar, porta ' + config.port);
+server.listen(port, function(){
+  log('Servidor no ar, porta ' + port);
 });
